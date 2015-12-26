@@ -1,0 +1,559 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN,zh-TW,en,default">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>常用正则表达式实例 | Silensea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="MoonYear530">
+    
+    <meta name="google-site-verification" content="tsudxUQsSVhgu-qjkhHwryj-uS1aD6MXEeO_da2bX4U" />
+    <meta name="wumiiVerification" content="142212b5-85ae-4cc1-8e1b-90387f1f03b2" />
+    
+    <meta name="description" content="RegEx; 正则表达式; 实例; 示例; 语法;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用正则表达式实例">
+<meta property="og:url" content="http://silensea.org/2015/04/21/常用正则表达式实例/index.html">
+<meta property="og:site_name" content="Silensea">
+<meta property="og:description" content="RegEx; 正则表达式; 实例; 示例; 语法;">
+<meta property="og:image" content="http://i.imgur.com/YR7Vh6r.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用正则表达式实例">
+<meta name="twitter:description" content="RegEx; 正则表达式; 实例; 示例; 语法;">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Silensea" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/Silensea.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/Silensea.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Silensea" title="Silensea"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Silensea">Silensea</a></h1>
+				<h2 class="blog-motto">静海散人的博客，俯身捡起海边的小石子……</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">存档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="搜索" />
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/04/21/常用正则表达式实例/" title="常用正则表达式实例" itemprop="url">常用正则表达式实例</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MoonYear530" target="_blank" itemprop="author">MoonYear530</a>
+		
+  <p class="article-time">
+    <time datetime="2015-04-21T11:56:46.000Z" itemprop="datePublished"> 发表于 2015-04-21</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-基本语法"><span class="toc-text">1.基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-数字校验表达式"><span class="toc-text">2.数字校验表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-字符校验表达式"><span class="toc-text">3.字符校验表达式</span></a></li></ol>
+		
+		</div>
+		
+		<p><img src="http://i.imgur.com/YR7Vh6r.jpg" alt="RegEx 正则表达式"></p>
+<h2 id="1-基本语法">1.基本语法</h2><a id="more"></a>
+<p><strong>注1:</strong> 文中正则表达式语句基本上用<code>【】</code>包括,以示区别;</p>
+<p><strong>注2:</strong> 具体语句请依具体使用情况做出相关修改,切忌照搬;</p>
+<p><strong>注3:</strong> 由于渲染问题,排版可能不能够很好对齐,但不影响使用,谢谢!</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">表达式	<span class="string">||	说明</span></span><br><span class="line">【.】	<span class="string">||	匹配任意字符.</span></span><br><span class="line">【*】	<span class="string">||	其左边的字符被匹配任意次(0次，或者多次). 例如 "</span>be*<span class="string">" 匹配 "</span>b<span class="string">", "</span>be<span class="string">" 或者 "</span>bee<span class="string">".</span></span><br><span class="line">【+】	<span class="string">||	其左边的字符被匹配至少一次(1次，或者多次). 例如 "</span>be+<span class="string">" 匹配 "</span>be<span class="string">" 或者 "</span>bee<span class="string">" 但是不匹配 "</span>b<span class="string">".</span></span><br><span class="line">【?】	<span class="string">||	其左边的字符被匹配0次或者1次. 例如 "</span>be?<span class="string">" 匹配 "</span>b<span class="string">" 或者 "</span>be<span class="string">" 但是不匹配 "</span>bee<span class="string">".</span></span><br><span class="line">【^】	<span class="string">||	其右边的表达式被匹配在行首. 例如 "</span>^A<span class="string">" 仅仅匹配以 "</span>A<span class="string">" 开头的行.</span></span><br><span class="line">【$】	<span class="string">||	其左边的表达式被匹配在行尾. 例如 "</span>e$<span class="string">" 仅仅匹配以 "</span>e<span class="string">" 结尾的行.</span></span><br><span class="line">【<span class="string">|】	||	匹配表达式左边和右边的字符. 例如, "</span>ab<span class="string">|bc"</span> 匹配 <span class="string">"ab"</span> 或者 <span class="string">"bc"</span>.</span><br><span class="line">【\n】	<span class="string">||	新行.</span></span><br><span class="line">【\t】	<span class="string">||	制表符.</span></span><br><span class="line">【[]】	<span class="string">||	匹配列表之中的任何单个字符, 连字符(-)指定范围. 例如, "</span>[ab]<span class="string">" 匹配 "</span>a<span class="string">" 或者 "</span>b<span class="string">". "</span>[<span class="number">0</span>-<span class="number">9</span>]<span class="string">" 匹配任意数字.</span></span><br><span class="line">【[^]】	<span class="string">||	匹配列表之外的任何单个字符. 例如, "</span>[^ab]<span class="string">" 匹配 "</span>a<span class="string">" 和 "</span>b<span class="string">" 以外的字符. "</span>[^<span class="number">0</span>-<span class="number">9</span>]<span class="string">" 匹配任意非数字字符.</span></span><br><span class="line">【()】	<span class="string">||	影响表达式匹配的顺序，并且用作表达式的分组标记.</span></span><br><span class="line">【\】	<span class="string">||	转义字符. 如果你要使用 "</span>\<span class="string">" 本身, 则应该使用 "</span>\\<span class="string">".</span></span><br></pre></td></tr></table></figure>
+<p><strong>表达式的分组</strong> 使用 <code>()</code> 来标记. 表达式的分组可以被引用为<code>\1</code>, <code>\2</code>, <code>\3</code>, 等等. <code>\1</code> 表示被匹配的第一个分组, <code>\2</code> 表示第二个分组, 依此类推.如 <code>abc</code> 查找 <code>(a)b(c)</code> 替换成 <code>\1-\2</code>,结果为 <code>a-c</code>.</p>
+<h2 id="2-数字校验表达式">2.数字校验表达式</h2><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">数字			||	【<span class="special">[</span>0-9<span class="special">]</span>】 或 【<span class="command">\d</span>】</span><br><span class="line">n位数字			||	【<span class="command">\d</span><span class="special">&#123;</span>n<span class="special">&#125;</span>】</span><br><span class="line">至少n位数字		||	【<span class="command">\d</span><span class="special">&#123;</span>n,<span class="special">&#125;</span>】</span><br><span class="line">m-n位数字		||	【<span class="command">\d</span><span class="special">&#123;</span>m,n<span class="special">&#125;</span>】</span><br><span class="line">0或非0开头的数字		||	【0|<span class="special">[</span>1-9<span class="special">]</span><span class="special">[</span>0-9<span class="special">]</span>*】</span><br><span class="line">非0开头带1-2位小数	||	【(<span class="special">[</span>1-9<span class="special">]</span><span class="special">[</span>0-9<span class="special">]</span>*)+(<span class="command">\.</span><span class="special">[</span>0-9<span class="special">]</span><span class="special">&#123;</span>1,2<span class="special">&#125;</span>)】</span><br><span class="line">带1-2位小数的正负数	||	【(<span class="command">\-</span>)?<span class="command">\d</span>+(<span class="command">\.</span><span class="command">\d</span><span class="special">&#123;</span>1,2<span class="special">&#125;</span>)】</span><br><span class="line">正数,负数和小数		||	【(<span class="command">\-</span>|<span class="command">\+</span>)?<span class="command">\d</span>+(<span class="command">\.</span><span class="command">\d</span>+)?】</span><br><span class="line">两位小数的正实数		||	【<span class="special">[</span>0-9<span class="special">]</span>+(<span class="command">\.</span><span class="special">[</span>0-9<span class="special">]</span><span class="special">&#123;</span>2<span class="special">&#125;</span>)】</span><br><span class="line">1-3位小数的正实数		||	【<span class="special">[</span>0-9<span class="special">]</span>+(<span class="command">\.</span><span class="special">[</span>0-9<span class="special">]</span><span class="special">&#123;</span>1,3<span class="special">&#125;</span>)】</span><br><span class="line">整数			||	【-?<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>|0】</span><br><span class="line">小数			||	【(-?<span class="command">\d</span>+)(<span class="command">\.</span><span class="command">\d</span>+)】</span><br><span class="line">正整数			||	【<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>】</span><br><span class="line">负整数			||	【-<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>】</span><br><span class="line">非正整数			||	【(-<span class="command">\d</span>+)|(0+)】 或 【-<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>|0】</span><br><span class="line">非负整数			||	【<span class="command">\d</span>+】 或 【<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>|0】</span><br><span class="line">非零正整数		||	【<span class="command">\+</span>?<span class="special">[</span>1-9<span class="special">]</span><span class="special">[</span>0-9<span class="special">]</span>*】</span><br><span class="line">非零负整数		||	【-<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>】</span><br><span class="line">浮点数			||	【-?(<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span><span class="command">\.</span><span class="command">\d*</span>|0<span class="command">\.</span><span class="command">\d*</span><span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>|0?<span class="command">\.</span>0+|0)】</span><br><span class="line">正浮点数			||	【<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span><span class="command">\.</span><span class="command">\d*</span>|0<span class="command">\.</span><span class="command">\d*</span><span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>】</span><br><span class="line">负浮点数			||	【-(<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span><span class="command">\.</span><span class="command">\d*</span>|0<span class="command">\.</span><span class="command">\d*</span><span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>)】</span><br><span class="line">非正浮点数		||	【((-<span class="command">\d</span>+(<span class="command">\.</span><span class="command">\d</span>+)?)|(0+(<span class="command">\.</span>0+)?))】 或 【(-(<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span><span class="command">\.</span><span class="command">\d*</span>|0<span class="command">\.</span><span class="command">\d*</span><span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>))|0?<span class="command">\.</span>0+|0】</span><br><span class="line">非负浮点数		||	【<span class="command">\d</span>+(<span class="command">\.</span><span class="command">\d</span>+)?】 或 【<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span><span class="command">\.</span><span class="command">\d*</span>|0<span class="command">\.</span><span class="command">\d*</span><span class="special">[</span>1-9<span class="special">]</span><span class="command">\d*</span>|0?<span class="command">\.</span>0+|0】</span><br></pre></td></tr></table></figure>
+<h2 id="3-字符校验表达式">3.字符校验表达式</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">中英赋码			||	【_\u[N|T|R|L|C|P|V|A|D|S|B|P|O|M|E|G|J|$]*】</span><br><span class="line">中文编码字符		||	【[\u4E00-\u9FA5]*】</span><br><span class="line">3-20位任意字符		||	【.&#123;3,20&#125;】</span><br><span class="line">英文字母字符串		||	【[A-Za-z]+】</span><br><span class="line">大写英文字母字符串	||	【[A-Z]+】</span><br><span class="line">小写英文字母字符串	||	【[a-z]+】</span><br><span class="line">不包含abc的单词		||	【\b((?!abc)\w)+\b】</span><br><span class="line">数字及英文字母字符串	||	【[A-Za-z0-9]+】</span><br><span class="line">数字,英文字母及下划线	||	【\w+】</span><br><span class="line">中英字符,数字,下划线	||	【[\u4E00-\u9FA5\w]+】</span><br><span class="line">中英字符,数字,无下划线	||	【[\u4E00-\u9FA5A-Za-z0-9]+】</span><br><span class="line">空行			||	【^[ 　\t]*\n】</span><br><span class="line">双字节字符		||	【[^\x00-\xff]】</span><br><span class="line">任意字符至行尾		||	【.*】</span><br><span class="line">行首空格符		||	【^[ 　\t]+】</span><br><span class="line">行尾空格符		||	【[ 　\t]+$】</span><br><span class="line">行首尾空格符		||	【^[ 　\t]+|[ 　\t]+$】</span><br><span class="line">行首尾空格符,包括换行符	||	【^\s<span class="emphasis">*|\s*</span>$】</span><br><span class="line">6位以上非空字符串		||	【\S&#123;6,&#125;】</span><br><span class="line">限制文件格式		||	【(.*)(\.jpg|\.bmp)$】</span><br><span class="line">20字以上限定		||	【[\s|\S]&#123;20,&#125;】</span><br><span class="line">字符反选			||	【(^|(?<span class="xml"><span class="tag">&lt;<span class="title">=字符)).*?(?=字符|$)】</span></span><br><span class="line">非法字符验证		||	【[\\\/\<span class="attribute">:</span>\*\?\"\&lt;\&gt;</span></span>\|]+】</span><br><span class="line">域名			||	【[<span class="link_label">a-zA-Z</span>][<span class="link_reference">-a-zA-Z0-9</span>]&#123;0,62&#125;(\.[<span class="link_label">a-zA-Z0-9</span>][<span class="link_reference">-a-zA-Z0-9</span>]&#123;0,62&#125;)+\.?】</span><br><span class="line">IP地址			||	【\d+\.\d+\.\d+\.\d+】 或 【((2[0-4]\d|25[0-5]|[01]?\d\d?)\.)&#123;3&#125;(2[0-4]\d|25[0-5]|[01]?\d\d?)】</span><br><span class="line">URL地址			||	【[a-zA-z]+://[^\s]*】</span><br><span class="line">HTML标记			||	【<span class="xml"><span class="tag">&lt;<span class="title">(\S*?)[^</span>&gt;</span></span>]<span class="emphasis">*&gt;.*</span>?|<span class="xml"><span class="tag">&lt; <span class="attribute">.</span>*? /&gt;</span></span>】</span><br><span class="line">HTML代码段		||	【<span class="xml"><span class="tag">&lt;<span class="title">(\S*?)[^</span>&gt;</span></span>]<span class="emphasis">*&gt;.*</span>?<span class="xml"><span class="tag">&lt;/<span class="title">\1</span>&gt;</span></span>|<span class="xml"><span class="tag">&lt;<span class="title">.*?(</span> \/)?&gt;</span></span>】</span><br><span class="line">E-Mail地址		||	【\w+([<span class="link_label">-+.</span>]\w+)<span class="emphasis">*@\w+([-.]\w+)*</span>\.\w+([<span class="link_label">-.</span>]\w+)<span class="emphasis">*】 或 【[\w-]+(\.[\w-]+)*</span>@[<span class="link_label">\w-</span>]+(\.[<span class="link_label">\w-</span>]+)+】 或 【[<span class="link_label">a-z0-9</span>](<span class="link_url">([-+.]|[_]+</span>)?[a-z0-9]+)*@([a-z0-9]+(\.|\-))+[a-z]&#123;2,6&#125;】</span><br><span class="line">逗号空格分隔的邮件地址	||	【\w+([-+.]\w+)<span class="emphasis">*@\w+([-.]\w+)*</span>\.\w+([-.]\w+)<span class="emphasis">*([,;]\s*</span>\w+([-+.]\w+)<span class="emphasis">*@\w+([-.]\w+)*</span>\.\w+([-.]\w+)<span class="emphasis">*)*</span>】</span><br><span class="line">字母开头,5-16字节账号	||	【^[<span class="link_label">a-zA-Z</span>][<span class="link_reference">a-zA-Z0-9_</span>]&#123;4,15&#125;$】</span><br><span class="line">钱币输入限制		||	【([0-9]+|[0-9]&#123;1,3&#125;(,[0-9]&#123;3&#125;)*)(.[0-9]&#123;1,2&#125;)?】</span><br><span class="line">XML文件			||	【([<span class="link_label">a-zA-Z</span>]+-?)+[<span class="link_label">a-zA-Z0-9</span>]+\\.[<span class="link_label">x|X</span>][<span class="link_reference">m|M</span>][<span class="link_label">l|L</span>]】</span><br><span class="line">大陆电话号码		||	【\d&#123;3&#125;-\d&#123;8&#125;|\d&#123;4&#125;-\d&#123;7&#125;】 或 【((\d&#123;3,4&#125;)|\d&#123;3,4&#125;-)?\d&#123;7,8&#125;(-\d&#123;3&#125;)*】</span><br><span class="line">手机号码			||	【(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d&#123;8&#125;】</span><br><span class="line">腾讯QQ号			||	【[<span class="link_label">1-9</span>][<span class="link_reference">0-9</span>]&#123;4,&#125;】</span><br><span class="line">中国邮编			||	【[1-9]\d&#123;5&#125;(?!\d)】</span><br><span class="line">中国身份证号		||	【\d&#123;18&#125;|\d&#123;15&#125;】 或 【\d&#123;15&#125;(\d\d[0-9xX])?】</span><br><span class="line">包括字符串的整行		||	【^.<span class="emphasis">*字符串.*</span>$】</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong>除非注明，<a href="http://silensea.org/" target="_blank" rel="external">静海散人博客</a>文章均为原创，转载请以链接形式标明本文地址，谢谢！</p>
+
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/倒腾技术/">倒腾技术</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/代码/">代码</a><a href="/tags/语言/">语言</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://silensea.org/2015/04/21/常用正则表达式实例/" data-title="常用正则表达式实例 | Silensea" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+
+	</article>
+	<div style="padding-left: 4%;"><script type="text/javascript" id="wumiiRelatedItems"></script></div>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/04/22/DOS-Dir-命令行操作符语法解释说明/" title="DOS Dir 命令行操作符语法解释说明">
+  <strong>上一篇：</strong><br/>
+  <span>
+  DOS Dir 命令行操作符语法解释说明</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/04/20/三国时期著名军事战役地图/"  title="三国时期著名军事战役地图">
+ <strong>下一篇：</strong><br/> 
+ <span>三国时期著名军事战役地图
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/04/21/常用正则表达式实例/" data-title="常用正则表达式实例" data-url="http://silensea.org/2015/04/21/常用正则表达式实例/"></div>
+</section>
+
+
+	<script type="text/javascript">
+		var wumiiPermaLink = ""; //请用代码生成文章永久的链接
+		var wumiiTitle = ""; //请用代码生成文章标题
+		var wumiiTags = ""; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+		var wumiiCategories = []; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+		var wumiiSitePrefix = "http://silensea.org/";
+		var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
+	</script>
+	<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+	<a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+		<img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0;" />
+	</a>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-基本语法"><span class="toc-text">1.基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-数字校验表达式"><span class="toc-text">2.数字校验表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-字符校验表达式"><span class="toc-text">3.字符校验表达式</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/倒腾技术/" title="倒腾技术">倒腾技术<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工作入职/" title="工作入职">工作入职<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/无事读书/" title="无事读书">无事读书<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/生活漫谈/" title="生活漫谈">生活漫谈<sup>7</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/代码/" title="代码">代码<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/语言/" title="语言">语言<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/娱乐/" title="娱乐">娱乐<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/系统/" title="系统">系统<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/经济/" title="经济">经济<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/农业/" title="农业">农业<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/互联网/" title="互联网">互联网<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历史/" title="历史">历史<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/小说/" title="小说">小说<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/网络/" title="网络">网络<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/音乐/" title="音乐">音乐<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/搜索/" title="搜索">搜索<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/思维/" title="思维">思维<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/游戏/" title="游戏">游戏<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/办公/" title="办公">办公<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://www.google.com.hk/" target="_blank" title=" 全球最大的搜索引擎">Google</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://zh.wikipedia.org/" target="_blank" title="维基百科">维基百科</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.ec2012jxust.com/m05/Index.html" target="_blank" title="舌尖上的赣州">舌尖上的赣州</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.smashingmagazine.com/" target="_blank" title=" Professional Web Design and Development">Smashing Magazine</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello, Welcome to Silensea. <br/>
+			Discovery our world, not be evil.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/u/3097621141" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://www.douban.com/people/MoonYear530" target="_blank" class="icon-douban" title="豆瓣"></a>
+		
+		
+		
+		
+		<a href="https://github.com/MoonYear530" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by-nc-nd/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by-nc-nd.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015
+		
+		<a href="/about" target="_blank" title="MoonYear530">MoonYear530</a>
+		
+
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"silensea"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

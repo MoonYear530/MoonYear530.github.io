@@ -1,0 +1,617 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN,zh-TW,en,default">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>DOS Dir 命令行操作符语法解释说明 | Silensea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="MoonYear530">
+    
+    <meta name="google-site-verification" content="tsudxUQsSVhgu-qjkhHwryj-uS1aD6MXEeO_da2bX4U" />
+    <meta name="wumiiVerification" content="142212b5-85ae-4cc1-8e1b-90387f1f03b2" />
+    
+    <meta name="description" content="Windows; DOS; 命令提示符; 语法; 指令; 文件;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOS Dir 命令行操作符语法解释说明">
+<meta property="og:url" content="http://silensea.org/2015/04/22/DOS-Dir-命令行操作符语法解释说明/index.html">
+<meta property="og:site_name" content="Silensea">
+<meta property="og:description" content="Windows; DOS; 命令提示符; 语法; 指令; 文件;">
+<meta property="og:image" content="http://i.imgur.com/ERBVlPY.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DOS Dir 命令行操作符语法解释说明">
+<meta name="twitter:description" content="Windows; DOS; 命令提示符; 语法; 指令; 文件;">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Silensea" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/Silensea.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/Silensea.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Silensea" title="Silensea"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Silensea">Silensea</a></h1>
+				<h2 class="blog-motto">静海散人的博客，俯身捡起海边的小石子……</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">存档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="搜索" />
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/04/22/DOS-Dir-命令行操作符语法解释说明/" title="DOS Dir 命令行操作符语法解释说明" itemprop="url">DOS Dir 命令行操作符语法解释说明</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MoonYear530" target="_blank" itemprop="author">MoonYear530</a>
+		
+  <p class="article-time">
+    <time datetime="2015-04-22T08:56:40.000Z" itemprop="datePublished"> 发表于 2015-04-22</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能"><span class="toc-number">1.</span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-number">2.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-number">3.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#备注"><span class="toc-number">4.</span> <span class="toc-text">备注</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例"><span class="toc-number">5.</span> <span class="toc-text">示例</span></a></li></ol>
+		
+		</div>
+		
+		<p><img src="http://i.imgur.com/ERBVlPY.png" alt="DOS"></p>
+<h3 id="功能">功能</h3><p><strong>Dir (directory) 命令</strong> 显示目录下文件及子目录的列表,若不接参数,默认显示<code>当前磁盘卷标及序列号</code>,接下来显示当前目录下文件及子文件夹列表,包含<code>最近修改日期-时间-占用字节数量-名称</code>. 对于文件,Dir命令包含显示它们的扩展名以及字节大小. Dir命令也显示<code>文件及子目录的数量,累计字节大小,磁盘剩余空间</code>等.</p>
+<a id="more"></a>
+<hr>
+<h3 id="语法">语法</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir [<span class="link_label">&lt;Drive&gt;:</span>][<span class="link_reference">&lt;Path&gt;</span>][<span class="link_label">&lt;FileName&gt;</span>] [<span class="link_label">...</span>] [<span class="link_label">/p</span>] [<span class="link_label">/q</span>] [<span class="link_label">/w</span>] [<span class="link_label">/d</span>] [<span class="link_label">/a[[:</span>]<span class="xml"><span class="tag">&lt;<span class="title">Attributes</span>&gt;</span></span>]][/o[[:]<span class="xml"><span class="tag">&lt;<span class="title">SortOrder</span>&gt;</span></span>]] [/t[[:]<span class="xml"><span class="tag">&lt;<span class="title">TimeField</span>&gt;</span></span>]] [/s] [/b] [/l] [/n] [/x] [/c] [/4]</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="参数">参数</h3><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">[&lt;Drive&gt;:][&lt;Path&gt;]</span>		指定需要查看列表的盘符及路径.</span><br><span class="line"></span><br><span class="line"><span class="annotation">[&lt;FileName&gt;]</span>			指定需要查看列表的特定文件或文件组.</span><br><span class="line"></span><br><span class="line">/p				每次显示一屏的列表,按任意键查看下一屏.</span><br><span class="line"></span><br><span class="line">/q				显示文件所有权信息.</span><br><span class="line"></span><br><span class="line">/w				以宽屏多列(需缓冲区宽度支持)格式显示目录及文件列表.</span><br><span class="line"></span><br><span class="line">/d				按列排序文件及文件夹列表,宽屏多列显示.</span><br><span class="line"></span><br><span class="line">/a[[:]&lt;Attributes&gt;]		仅显示指定类型的文件及子目录名称列表,</span><br><span class="line">  				如果省略/a,则显示除系统及隐藏文件之外的列表;</span><br><span class="line">  				若不接属性使用/a,则显示包含系统及隐藏文件的所有文件及目录列表</span><br><span class="line"></span><br><span class="line">		下面为可用属性列表,冒号可省略,属性可任意组合,中间不加空格:</span><br><span class="line">		d	目录</span><br><span class="line">		h	隐藏文件</span><br><span class="line">		s	系统文件</span><br><span class="line">		l	重解析点</span><br><span class="line">		r	只读文件</span><br><span class="line">		a	预存盘文件</span><br><span class="line">		i	无内容索引文件</span><br><span class="line">		-	否定前缀</span><br><span class="line"></span><br><span class="line">/o[[:]&lt;SortOrder&gt;]		依据排序指令输出列表,以下为可用属性列表(冒号可选):</span><br><span class="line"></span><br><span class="line">		若未指定属性,dir /o默认按名称字母顺序排列</span><br><span class="line">		n	名称字母顺序排列</span><br><span class="line">		e	扩展名字母顺序排列</span><br><span class="line">		g	组目录优先显示</span><br><span class="line">		s	字节数从小到大排列</span><br><span class="line">		d	最近修改时间从早到近排序</span><br><span class="line">		-	逆序排列前缀</span><br><span class="line"></span><br><span class="line">/t[[:]&lt;TimeField&gt;]		按时间属性排列,以下为可用字段:</span><br><span class="line">		c	创建时间</span><br><span class="line">		a	最近访问时间</span><br><span class="line">		w	最近修改时间</span><br><span class="line"></span><br><span class="line">/s				列出指定目录下所有文件,包含子目录</span><br><span class="line"></span><br><span class="line">/b				只显示指定目录下的目录及文件名, /b将覆盖 /w</span><br><span class="line"></span><br><span class="line">/l				以小写字母显示未排序的目录及文件列表</span><br><span class="line"></span><br><span class="line">/n				显示按名称字母顺序排列列表</span><br><span class="line"></span><br><span class="line">/x				在长名称前面增加显示短名称,名称字母顺序排列</span><br><span class="line"></span><br><span class="line">/c				显示千位分隔符,已默认,不显示输入 /-c</span><br><span class="line"></span><br><span class="line">/<span class="number">4</span>				显示<span class="number">4</span>位格式的年份</span><br><span class="line"></span><br><span class="line">/?				显示帮助</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="备注">备注</h3><ul>
+<li><p>若要使用<strong>多个文件名</strong>参数,用半角<code>空格</code>,<code>逗号</code>或<code>分号</code>分隔每个文件的名称.</p>
+</li>
+<li><p>使用<strong>通配符</strong>(<code>*</code>或<code>?</code>)来表示文件名中的多个或一个字符,示例:</p>
+  <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dir</span> *.txt</span><br><span class="line"><span class="keyword">dir</span> <span class="keyword">read</span>*.txt</span><br><span class="line"><span class="keyword">dir</span> <span class="keyword">read</span>*.*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>星号*</code>通配符始终使用了<strong>短名称映射</strong>,因此使用它可能会得到意外的结果(如返回映射后的短名称对应文件),所以在使用删除命令<code>del xx*xx</code>时要格外小心.</p>
+</li>
+<li><p>使用多个<code>问号?</code>通配符时,将返回问号通配最少到最多个数的情况,如<code>read???.txt</code>将返回<code>Read.txt</code>, <code>Read1.txt</code>, <code>Read12.txt</code>, <code>Read123.txt</code>, <code>Readme1.txt</code>等情况.</p>
+</li>
+<li><p>指令中的<strong>多个属性</strong>一起使用时,将返回同时具备这些属性的文件,例如使用<code>/a:r-h</code> 或 <code>/ar-h</code>将显示只读且非隐藏的文件.</p>
+</li>
+<li><p>文件名排序问题</p>
+<ul>
+<li><p>有多个排序指令时,先按第一个条件排列再按之后的条件排列,最后输出结果,例如使用<code>/o:e-s</code> 或 <code>/oe-s</code>将按扩展名再按占用字节从大到小排列.</p>
+</li>
+<li><p>按扩展名排序会先显示无扩展名文件,紧接着目录和带扩展名的文件.</p>
+</li>
+</ul>
+</li>
+<li><p>重定向输出及通道输出</p>
+<ol>
+<li><p>当您使用重定向符号(<code>&gt;</code>)将dir命令的输出发送到文件或者其他命令的通道(<code>|</code>)时,使用<code>/a:-d /b</code>命令只输出文件名称(不包含目录).</p>
+</li>
+<li><p>您也可以使用<code>/b /s</code>命令行出指定目录下所有目录,子目录及文件的列表.<code>dir</code>命令将分行列出其查找到的文件驱动器号,目录名,文件名及扩展名.</p>
+</li>
+<li><p>当你使用通道将<code>dir</code>命令的结果输出到其他命令时,您需要在<code>Autoexec.nt</code>文件中设置<code>TEMP</code>环境为可用.</p>
+</li>
+</ol>
+</li>
+<li><p>可以在<strong>控制台</strong>中使用带不同参数的<code>dir</code>命令.</p>
+</li>
+</ul>
+<hr>
+<h3 id="示例">示例</h3><ul>
+<li><p><strong>常用命令</strong> 只输出<code>C盘Temp文件夹(包含子目录)</code>下的文件名到C盘根目录下的<code>Index.txt文件</code>,并排序:</p>
+<pre><code>dir C:\Temp /<span class="regexp">s/o/b/a</span>-d-<span class="keyword">s</span> &gt;C:\Index.txt
+</code></pre></li>
+<li><p>显示所有目录及文件,字母顺序排列,宽屏多列显示,单屏暂停,输入:</p>
+<pre><code>dir /<span class="regexp">s/w/o/p</span>
+</code></pre></li>
+<li><p>更改上一个示例,dir命令输出文件名及扩展名,但省略目录名,输入:</p>
+<pre><code>dir /<span class="regexp">s/w/o/p</span><span class="regexp">/a:-d</span>
+</code></pre></li>
+<li><p>打印目录列表,输入:</p>
+<pre><code><span class="built_in">dir</span> &gt; <span class="stream">prn</span>
+</code></pre><p>  当指定 <code>prn</code> 时,目录列表将发送到连接到 <code>LPT1</code> 端口的打印机.如果打印机连接到另一个端口,则必须使用正确的端口名称替换<code>prn</code>.</p>
+</li>
+<li><p>可以通过用文件名替换 <code>prn</code> 的命令重定向输出到文件,可以在其中键入路径.例如,要将 <code>dir</code> 命令结果重定向输出到<code>Records</code>目录下的文件 <code>dir.doc</code> 中保存,输入:</p>
+<pre><code><span class="built_in">dir</span> &gt; \records\<span class="built_in">dir</span>.doc
+</code></pre><p>  如果 <code>dir.doc</code> 不存在,dir命令将创建它,除非<code>Records</code>目录不存在,在这种情况下,将显示”文件创建失败”的消息.</p>
+</li>
+<li><p>要在<code>驱动器C</code>上查找所有扩展名为<code>.txt</code>的文件,输入:</p>
+<pre><code>dir <span class="string">c:</span>\*.txt <span class="regexp">/w/</span>o<span class="regexp">/s/</span>p
+</code></pre><p>  此命令将以宽屏多列格式,每个目录按字母顺序排列,单屏暂停的形式输出列表.</p>
+</li>
+</ul>
+<hr>
+<p><em>This article made by <a href="http://weibo.com/u/3097621141" title="Weibo" target="_blank" rel="external">MoonYear530</a> ,Date 2014/12/24.</em></p>
+<p><strong>提示：</strong>除非注明，<a href="http://silensea.org/" target="_blank" rel="external">静海散人博客</a>文章均为原创，转载请以链接形式标明本文地址，谢谢！</p>
+
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/倒腾技术/">倒腾技术</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/代码/">代码</a><a href="/tags/系统/">系统</a><a href="/tags/语言/">语言</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://silensea.org/2015/04/22/DOS-Dir-命令行操作符语法解释说明/" data-title="DOS Dir 命令行操作符语法解释说明 | Silensea" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+
+	</article>
+	<div style="padding-left: 4%;"><script type="text/javascript" id="wumiiRelatedItems"></script></div>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/04/24/水浒传108将排位及简介/" title="水浒传108将排位及简介">
+  <strong>上一篇：</strong><br/>
+  <span>
+  水浒传108将排位及简介</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/04/21/常用正则表达式实例/"  title="常用正则表达式实例">
+ <strong>下一篇：</strong><br/> 
+ <span>常用正则表达式实例
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/04/22/DOS-Dir-命令行操作符语法解释说明/" data-title="DOS Dir 命令行操作符语法解释说明" data-url="http://silensea.org/2015/04/22/DOS-Dir-命令行操作符语法解释说明/"></div>
+</section>
+
+
+	<script type="text/javascript">
+		var wumiiPermaLink = ""; //请用代码生成文章永久的链接
+		var wumiiTitle = ""; //请用代码生成文章标题
+		var wumiiTags = ""; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+		var wumiiCategories = []; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+		var wumiiSitePrefix = "http://silensea.org/";
+		var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
+	</script>
+	<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+	<a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+		<img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0;" />
+	</a>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能"><span class="toc-number">1.</span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-number">2.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-number">3.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#备注"><span class="toc-number">4.</span> <span class="toc-text">备注</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例"><span class="toc-number">5.</span> <span class="toc-text">示例</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/倒腾技术/" title="倒腾技术">倒腾技术<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工作入职/" title="工作入职">工作入职<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/无事读书/" title="无事读书">无事读书<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/生活漫谈/" title="生活漫谈">生活漫谈<sup>7</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/代码/" title="代码">代码<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/语言/" title="语言">语言<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/娱乐/" title="娱乐">娱乐<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/系统/" title="系统">系统<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/经济/" title="经济">经济<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/农业/" title="农业">农业<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/互联网/" title="互联网">互联网<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历史/" title="历史">历史<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/小说/" title="小说">小说<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/网络/" title="网络">网络<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/音乐/" title="音乐">音乐<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/搜索/" title="搜索">搜索<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/思维/" title="思维">思维<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/游戏/" title="游戏">游戏<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/办公/" title="办公">办公<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://www.google.com.hk/" target="_blank" title=" 全球最大的搜索引擎">Google</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://zh.wikipedia.org/" target="_blank" title="维基百科">维基百科</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.ec2012jxust.com/m05/Index.html" target="_blank" title="舌尖上的赣州">舌尖上的赣州</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.smashingmagazine.com/" target="_blank" title=" Professional Web Design and Development">Smashing Magazine</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello, Welcome to Silensea. <br/>
+			Discovery our world, not be evil.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/u/3097621141" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://www.douban.com/people/MoonYear530" target="_blank" class="icon-douban" title="豆瓣"></a>
+		
+		
+		
+		
+		<a href="https://github.com/MoonYear530" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by-nc-nd/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by-nc-nd.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015
+		
+		<a href="/about" target="_blank" title="MoonYear530">MoonYear530</a>
+		
+
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"silensea"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
