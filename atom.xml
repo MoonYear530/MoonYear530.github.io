@@ -4,7 +4,7 @@
   <subtitle><![CDATA[静海散人的博客，俯身捡起海边的小石子……]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://silensea.org/"/>
-  <updated>2015-12-21T10:19:48.750Z</updated>
+  <updated>2016-02-27T14:42:27.842Z</updated>
   <id>http://silensea.org/</id>
   
   <author>
@@ -13,6 +13,160 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Some Note of Front-end development]]></title>
+    <link href="http://silensea.org/2016/02/27/Some-Note-of-Front-end-development/"/>
+    <id>http://silensea.org/2016/02/27/Some-Note-of-Front-end-development/</id>
+    <published>2016-02-27T14:25:57.000Z</published>
+    <updated>2016-02-27T14:42:27.842Z</updated>
+    <content type="html"><![CDATA[<ul>
+<li>Best Practices<ul>
+<li>user-friendly web content<ul>
+<li>type and web typography <a id="more"></a></li>
+<li>easy and pleasant to read</li>
+<li>easy to understand</li>
+<li>content should be skimmable, concise</li>
+<li>use headings to break up long articles</li>
+<li>use lists and text conspicuous formatting</li>
+<li>text blocks with sufficient white spacing</li>
+<li>hyperlingked text user-friendly</li>
+<li>visuals content strategically: photos, charts, graphs should contain relevat information</li>
+</ul>
+</li>
+<li>some method<ul>
+<li>a/b testing in compare website conversion results</li>
+<li>parallax scrolling with white space in content design</li>
+<li>text typography with web safe fonts</li>
+<li>donot add or emphasizes much, less is better without confused</li>
+<li>sometimes you can design your website with funny</li>
+</ul>
+</li>
+<li>better practices (web)<ul>
+<li>responsive</li>
+<li>mobile-first design</li>
+<li>accessibility</li>
+<li>optimize ux</li>
+<li>focus on long-form content</li>
+<li>need feedback</li>
+</ul>
+</li>
+<li>worse practices<ul>
+<li>clickbait</li>
+<li>overuse of overlays</li>
+<li>flash</li>
+<li>farming ad clicks</li>
+<li>not optimizing images</li>
+<li>autoplay</li>
+</ul>
+</li>
+<li>best coding practices</li>
+<li>design in start: life cycle, requirements, architecture, design, choose programming languages</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>Coding Conventions</p>
+<ul>
+<li>name as: coding standards, include below</li>
+<li>naming</li>
+<li>comment</li>
+<li>purpose</li>
+<li>description</li>
+<li>author</li>
+<li>modifications</li>
+<li>white space</li>
+<li>line length</li>
+<li>indent and tab</li>
+<li>vertical alignment</li>
+<li>declarations</li>
+<li><p>statements</p>
+</li>
+<li><p>file organization</p>
+</li>
+<li>programming rules</li>
+<li>programming principles</li>
+<li>programming style</li>
+<li>programming practices</li>
+<li>simplicity and portability</li>
+<li>building, testing, debugging, correcting errors</li>
+<li>javascript<ul>
+<li>google closure compiler</li>
+<li>jslint</li>
+<li>jshint</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>System Design<ul>
+<li>architectural design</li>
+<li>logical design</li>
+<li>physical design</li>
+<li>input, output, storage, processing, control, backup, recovery</li>
+<li>maybe broken down into three sub-tasks: user interface design, data design, process design</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>Web Application Framework</p>
+<ul>
+<li>a software framework in web development</li>
+<li>architectures</li>
+<li>mvc (model view controller)</li>
+<li>push-based</li>
+<li>pull-based</li>
+<li>three-tier organization</li>
+<li>applications</li>
+<li>dynamic websites</li>
+<li><p>general-purpose</p>
+</li>
+<li><p>django</p>
+</li>
+<li>zend framework</li>
+<li><p>ruby on rails</p>
+</li>
+<li><p>discussion forums, wikis, weblogs</p>
+</li>
+<li>organizational portals</li>
+<li>content management systems</li>
+<li>features<ul>
+<li>web template system</li>
+<li>caching</li>
+<li>security</li>
+<li>database access, mapping, configuration</li>
+<li>scaffolding</li>
+<li>url mapping</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>ajax</li>
+<li>web services</li>
+<li>web resources</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[Front-end; Web Development; Note; Reading; Tips;]]>
+    
+    </summary>
+    
+      <category term="前端" scheme="http://silensea.org/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="开发" scheme="http://silensea.org/tags/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="网络" scheme="http://silensea.org/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="倒腾技术" scheme="http://silensea.org/categories/%E5%80%92%E8%85%BE%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[三种流行的 CSS Reset 解决方案]]></title>
@@ -4651,261 +4805,6 @@ DOWLER <span class="keyword">L</span>. 1995. The research university's dilemma:r
     </summary>
     
       <category term="无事读书" scheme="http://silensea.org/categories/%E6%97%A0%E4%BA%8B%E8%AF%BB%E4%B9%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[MarkDown 语法学习笔记]]></title>
-    <link href="http://silensea.org/2015/04/18/MarkDown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://silensea.org/2015/04/18/MarkDown-语法学习笔记/</id>
-    <published>2015-04-18T01:08:08.000Z</published>
-    <updated>2015-05-23T05:00:35.425Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/WuhIhZm.png" alt="MarkDown"></p>
-<blockquote>
-<p>MarkDown,一种让写作者专注于编写的标记式纯文本语言,体验禅意一般的美!</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<h3 id="概述">概述</h3><h4 id="HTML兼容">HTML兼容</h4><ol>
-<li><p>在Markdown涵盖范围之外的标签，都可以直接在文件里面用HTML撰写.</p>
-</li>
-<li><p><strong>区块元素</strong>──比如<code>&lt;div&gt;、&lt;table&gt;、&lt;pre&gt;、&lt;p&gt;</code>等标签，必需在前后加上空行，以利与内容区隔。而且这些（元素）的开始与结尾标签，不可以用tab或是空白来缩排.</p>
-<p> 在Markdown文件里加上一段HTML表格：</p>
-<pre><code>This is a regular paragraph.
-
-<span class="tag">&lt;<span class="title">table</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">td</span>&gt;</span>Foo<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">table</span>&gt;</span>
-
-This is another regular paragraph.
-</code></pre></li>
-<li><p>Markdown语法在<code>HTML</code><strong>区块卷标</strong>中将不会被进行处理。例如，你无法在HTML区块内使用Markdown形式的<code>*强调*</code>。</p>
-</li>
-<li><p>HTML的<strong>区段标签</strong>如<code>&lt;span&gt;、&lt;cite&gt;、&lt;del&gt;</code>则不受限制，可以在Markdown的段落、清单或是标题里任意使用。如果比较喜欢HTML的<code>&lt;a&gt;</code>或<code>&lt;img&gt;</code>标签，可以直接使用这些卷标,在区段卷标的范围内,Markdown的语法是有效的。</p>
-</li>
-</ol>
-<hr>
-<h4 id="特殊字符处理">特殊字符处理</h4><p>在HTML文件中，有两个字符需要特殊处理：”<code>&lt;</code>“ 和 “<code>&amp;</code>“。”<code>&lt;</code>“符号用于起始卷标,”<code>&amp;</code>“符号则用于标记HTML实体，如果你只是想要使用这些符号，你必须要使用实体的形式，像是<strong><code>&amp;lt;</code>和<code>&amp;amp;</code></strong>。</p>
-<p><strong>“&amp;”符号</strong> 其实很容易让写作网络文件的人感到困扰，如果你要打「AT&amp;T」 ，你必须要写成「AT<code>&amp;amp;</code>T」,还得转换网址内的&amp;符号，如果你要链接到：</p>
-<pre><code><span class="string">http:</span><span class="comment">//images.google.com/images?num=30&amp;q=larry+bird</span>
-</code></pre><p>你必须要把网址转成：</p>
-<pre><code><span class="string">http:</span><span class="comment">//images.google.com/images?num=30&amp;amp;q=larry+bird</span>
-</code></pre><p>才能放到链接卷标的href属性里。在HTML实体中使用&amp;符号的话，它不会被转换，而在其他情形下，它则会被转换成<code>&amp;amp;</code>。</p>
-<p>如果要在文件中插入一个<strong>著作权 &copy;</strong> 的符号，可以这样写：<code>&amp;copy;</code>。</p>
-<p>MarkDown可能会将 AT&amp;T 转换为 <code>AT&amp;amp;T</code>，也可能会将 4 &lt; 5 转换为 <code>4 &amp;lt; 5</code>.</p>
-<p>需要注意的是，code范围内，不论是行内还是区块，&lt;和&amp;两个符号都一定会被转换成HTML实体，这项特性让你可以很容易地用Markdown写HTML code。</p>
-<hr>
-<h3 id="区块元素">区块元素</h3><h4 id="段落和换行">段落和换行</h4><p>一个段落是由一个以上相连接的行句组成，而一个以上的空行则会切分出不同的段落,<br><strong>一个以上相连接的行句组成</strong>这句话其实暗示了Markdown允许段落内的强迫断行.</p>
-<p>如果你真的想要插入<code>&lt;br /&gt;</code>标签的话，在行尾加上<strong>两个以上的空白</strong>，然后按enter.</p>
-<hr>
-<h4 id="标题">标题</h4><p>Markdown支持两种标题的语法， <em>Setext</em> 和 <em>atx</em> 形式。</p>
-<p>Setext形式是用底线的形式，利用=（最高阶标题）和-（第二阶标题），例如：</p>
-<pre><code><span class="header">This is an H1
-=============</span>
-<span class="header">This is an H2
--------------</span>
-</code></pre><p>任何数量的=和-都可以有效果。</p>
-<p>Atx形式则是在行首插入1到6个 # ，各对应到标题1到6阶，例如：</p>
-<pre><code><span class="comment"># This is an H1</span>
-<span class="comment">## This is an H2</span>
-<span class="comment">###### This is an H6</span>
-</code></pre><p>Atx样式的标题，可以在行尾加上#，而行尾的#数量也不用和开头一样（行首的#数量决定标题的阶数）</p>
-<hr>
-<h4 id="区块引言">区块引言</h4><p>Markdown使用email形式的区块引言，在每行的最前面加上&gt;：</p>
-<pre><code>&gt; This is a blockquote with two paragraphs. Lo<span class="comment">rem ipsum dolor sit amet,</span>
-&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-&gt; Vestibulum enim wisi, viverra nec, fringilla <span class="flow">in</span>, laoreet vitae, risus.
-&gt;
-&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-&gt; id sem consectetuer libero luctus adipiscing.
-</code></pre><p>也允许你只在整个段落的第一行最前面加上&gt;：</p>
-<pre><code>&gt; This is a blockquote with two paragraphs. Lo<span class="comment">rem ipsum dolor sit amet,</span>
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla <span class="flow">in</span>, laoreet vitae, risus.
-</code></pre><p>区块引言可以有阶层（例如：引言内的引言），只要根据层数加上不同数量的&gt;：</p>
-<ul>
-<li>代码:</li>
-</ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; This is the first level of quoting.</span><br><span class="line">&gt;</span><br><span class="line">&gt; &gt; This is nested <span class="tag">blockquote</span>.</span><br><span class="line">&gt; &gt; &gt; This is <span class="tag">a</span> <span class="tag">blockquote</span>.</span><br></pre></td></tr></table></figure>
-<ul>
-<li>效果:</li>
-</ul>
-<blockquote>
-<p>This is the first level of quoting.</p>
-<blockquote>
-<p>This is nested blockquote.</p>
-<blockquote>
-<p>This is a blockquote.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>引言的区块内也可以使用其他的Markdown语法，包括标题、列表、程序代码区块等：</p>
-<blockquote>
-<p>代码:</p>
-</blockquote>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="blockquote">&gt; ## This is a header.</span></span><br><span class="line"><span class="blockquote">&gt;</span><br><span class="line">&gt; 1.   This is the first list item.</span></span><br><span class="line"><span class="blockquote">&gt; 2.   This is the second list item.</span></span><br><span class="line"><span class="blockquote">&gt;</span><br><span class="line">&gt; Here's some example code:</span></span><br><span class="line"><span class="blockquote">&gt;</span><br><span class="line">&gt;     return shell_exec("echo $input | $markdown_script");</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="列表清单">列表清单</h4><p>Markdown支持<strong>有序列表和无序列表</strong>。</p>
-<p>无序清单使用星号、加号或是减号作为列表标记：</p>
-<p>“<code>* Red</code>“ 等同于 “<code>+ Red</code>“, 也等同于 “<code>- Red</code>“</p>
-<p>有序列表则使用<strong>任意</strong>整数数字(无需按顺序)接着一个英文句点：<code>1.  Bird</code></p>
-<p>如果你使用懒惰的写法，建议第一个项目最好还是从「1.」开始，因为Markdown未来可能会支持有序列表的start属性。</p>
-<p>列表项目标记通常是放在最左边，但是其实也可以<strong>缩排，最多三个空白</strong>，项目标记后面则<strong>一定要接着至少一个</strong>空白或tab。</p>
-<p>如果列表项目间用空行分开， Markdown会把项目的内容在输出时用<code>&lt;p&gt;</code>标签包起来,如</p>
-<pre><code><span class="bullet">*   </span>Bird
-
-<span class="bullet">*   </span>Magic
-</code></pre><p>会被转换为：</p>
-<pre><code><span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>Bird<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>Magic<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-</code></pre><p>列表项目可以包含多个段落，每个项目下的段落都必须缩排4个空白或是一个tab,清单中不同的段落用空行隔开,同一段落前面可以缩进也可以不缩进,如:</p>
-<pre><code>*   This <span class="keyword">is</span> a <span class="type">list</span> <span class="property">item</span> <span class="keyword">with</span> two <span class="property">paragraphs</span>.
-
-    This <span class="keyword">is</span> <span class="keyword">the</span> <span class="keyword">second</span> <span class="property">paragraph</span> <span class="keyword">in</span> <span class="keyword">the</span> <span class="type">list</span> <span class="property">item</span>. You're
-only required <span class="keyword">to</span> indent <span class="keyword">the</span> <span class="keyword">first</span> line. Lorem ipsum dolor
-sit amet, consectetuer adipiscing elit.
-
-*   Another <span class="property">item</span> <span class="keyword">in</span> <span class="keyword">the</span> same <span class="type">list</span>.
-</code></pre><p>如果要在列表项目内放进引言，那”&gt;”就需要缩排：</p>
-<pre><code>*   A <span class="type">list</span> <span class="property">item</span> <span class="keyword">with</span> a blockquote:
-
-    &gt; This <span class="keyword">is</span> a blockquote
-    &gt; inside a <span class="type">list</span> <span class="property">item</span>.
-</code></pre><p>如果要放程序代码区块的话，该区块就需要<strong>缩排两次</strong>，也就是8个空白或是两个tab：</p>
-<pre><code>*   A <span class="type">list</span> <span class="property">item</span> <span class="keyword">with</span> a code block:
-
-        &lt;code goes here&gt;
-</code></pre><p>行首出现<strong>数字－句点－空白</strong>，要避免转化为清单的状况，可以在句点前面加上反斜杠。</p>
-<pre><code><span class="number">1986</span>\. What <span class="tag">a</span> great season.
-</code></pre><hr>
-<h4 id="程序代码区块">程序代码区块</h4><p>要在Markdown中建立程序代码区块很简单，只要简单地缩排4个空白或是1个tab就可以，Markdown会用<code>&lt;pre&gt;</code>和<code>&lt;code&gt;</code>标签来把程序代码区块包起来,例如，下面的输入：</p>
-<pre><code>This is <span class="tag">a</span> <span class="attribute">normal</span> paragraph:
-
-    This is <span class="tag">a</span> <span class="tag">code</span> block.
-</code></pre><p>一个程序代码区块会一直持续到没有缩排的那一行（或是文件结尾）。</p>
-<pre><code>&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"footer"</span>&gt;
-    &amp;<span class="keyword">copy</span>; <span class="number">2004</span> Foo Corporation
-&lt;/<span class="keyword">div</span>&gt;
-</code></pre><p>在程序代码区块里面，&amp;、&lt;和&gt;会自动转成HTML实体，这样的方式让你非常容易使用Markdown插入范例用的HTML原始码，只需要复制贴上，再加上缩排就可以了.</p>
-<p>程序代码区块中，一般的Markdown语法不会被转换，像是星号便只是星号.</p>
-<hr>
-<h4 id="分隔线">分隔线</h4><p>可以在一行中用三个或以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号中间插入空白，行的上一行不能有内容，否则可能会变成标题。</p>
-<pre><code><span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span>
-
-<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>
-
-<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>
-
-- - -
-
----------------------------------------
-</code></pre><hr>
-<h3 id="区段元素">区段元素</h3><h4 id="链接">链接</h4><p>Markdown支持两种形式的链接语法：<strong>行内和参考</strong>两种形式。不管是哪一种，链接的文字都是用 [方括号] 来标记。</p>
-<p>要建立一个<strong>行内形式</strong>的连结，只要在方块括号后面马上接着括号并插入网址连结即可，如果你还想要加上链接的title文字，只要在网址后面，用双引号把title文字包起来即可，例如：</p>
-<pre><code>This is [<span class="link_label">an example</span>](<span class="link_url">http://example.com/ "Title"</span>) inline link.
-
-[<span class="link_label">This link</span>](<span class="link_url">http://example.net/</span>) has no title attribute.
-</code></pre><p>如果你是要链接到同样主机的资源，你可以使用<strong>相对路径</strong>：</p>
-<pre><code>See my [<span class="link_label">About</span>](<span class="link_url">/about/</span>) page for details.
-</code></pre><p><strong>参考形式</strong>的连结使用另外一个方括号接在链接文字的括号后面，而在第二个方括号里面要填入用以辨识链接的标签，可以选择性地在两个方括号中间加上空白：</p>
-<pre><code>This is [<span class="link_label">an example</span>][<span class="link_reference">id</span>] reference-style link.
-</code></pre><p>接着，在文件的任意处，你可以把这个标签的链接内容定义出来：</p>
-<pre><code><span class="attr_selector">[id]</span>: <span class="rule"><span class="attribute">http</span>:<span class="value">//example.com/  <span class="string">"Optional Title Here"</span></span></span>
-</code></pre><p>连结定义的形式为：</p>
-<ul>
-<li>方括号，里面输入链接的辨识用卷标(链接辨识卷标可以有字母、数字、空白和标点符号，但是<strong>并不区分大小写</strong>)</li>
-<li>接着一个冒号</li>
-<li>接着一个以上的空白或tab</li>
-<li>接着连结的网址</li>
-<li>选择性地接着title内容，可以用<em>单引号、双引号或是括号</em>包着(已知的问题是Markdown.pl 1.0.1会忽略单引号包起来的连结title)</li>
-</ul>
-<p>连结网址也可以用方括号包起来：</p>
-<pre><code><span class="attr_selector">[id]</span>: &lt;<span class="rule"><span class="attribute">http</span>:<span class="value">//example.com/&gt;  <span class="string">"Optional Title Here"</span></span></span>
-</code></pre><p>你也可以把title属性放到下一行，也可以加一些缩排，网址太长的话，这样会比较好看：</p>
-<pre><code>[id]<span class="symbol">:</span> <span class="symbol">http:</span>/<span class="regexp">/example.com/longish</span><span class="regexp">/path/to</span><span class="regexp">/resource/here</span>
-    <span class="string">"Optional Title Here"</span>
-</code></pre><p><strong>默认的链接卷标功能</strong>让你可以省略指定链接标签，这种情形下，链接卷标和链接文字会视为相同，要用默认链接卷标只要在<strong>链接文字后面加上一个空的方括号</strong>:</p>
-<pre><code>[<span class="link_label">Google</span>][<span class="link_reference"></span>]
-</code></pre><p>然后定义连结内容：</p>
-<pre><code>[<span class="link_reference">Google</span>]:<span class="link_url"> http://google.com/</span>
-</code></pre><p>由于链接文字可能包含空白，所以这种简化的标签内也可以包含多个文字：</p>
-<pre><code>Visit [<span class="link_label">Daring Fireball</span>][<span class="link_reference"></span>] for more information.
-</code></pre><p>然后接着定义连结：</p>
-<pre><code>[<span class="link_reference">Daring Fireball</span>]:<span class="link_url"> http://daringfireball.net/</span>
-</code></pre><p>连结的定义可以放在文件中的任何一个地方，可以直接放在连结出现段落的后面，也可以把它放在文件最后面，就像是批注一样。</p>
-<p>参考式的连结其实重点不在于它比较好写，而是它比较好读，使用Markdown的参考式连结，可以让文件更像是浏览器最后产生的结果，你就可以增加连结而不让文章的阅读感觉被打断。</p>
-<hr>
-<h4 id="强调">强调</h4><p>Markdown使用星号（<code>*</code>）和底线（<code>_</code>）作为标记强调字词的符号，被<code>*</code>或<code>_</code>包围的字词会被转成用<code>&lt;em&gt;</code>标签包围，用两个<code>*</code>或<code>_</code>包起来的话，则会被转成<code>&lt;strong&gt;</code>,你用什么符号开启卷标，就要用什么符号结束。</p>
-<p>但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。</p>
-<p>如果要在文字前后直接插入普通的星号或底线，你可以在它前面<em>加上反斜杠</em>。</p>
-<pre><code><span class="string">\*this</span> text <span class="keyword">is</span> surrounded <span class="keyword">by</span> literal asterisks<span class="string">\*</span>
-</code></pre><hr>
-<h4 id="程序代码">程序代码</h4><p>如果要标记一小段行内程序代码，你可以用反引号把它包起来（`），例如：</p>
-<pre><code><span class="keyword">Use</span> the `printf()` <span class="function"><span class="keyword">function</span>.</span>
-</code></pre><p>如果要在程序代码区段内插入反引号，你可以用多个反引号来开启和结束程序代码区段：</p>
-<pre><code><span class="escape">``</span>There is <span class="literal">a</span> literal backtick (<span class="escape">`)</span> here.<span class="escape">``</span>
-</code></pre><p><strong>程序代码区段</strong>的前端和后端端都可以放入一个空白.</p>
-<p>在程序代码区段内，”&amp;”和”&lt;” “&gt;”都会被转成HTML实体，这样会比较容易插入HTML原始码，Markdown会把下面这段：</p>
-<pre><code>Please don't <span class="operator"><span class="keyword">use</span> <span class="keyword">any</span> <span class="string">`&lt;blink&gt;`</span> tags.</span>
-</code></pre><p>转为：</p>
-<pre><code><span class="variable">&lt;p&gt;</span>Please don't use <span class="literal">any</span> <span class="variable">&lt;code&gt;</span>&amp;lt;blink&amp;gt;<span class="variable">&lt;/code&gt;</span> tags.<span class="variable">&lt;/p&gt;</span>
-</code></pre><hr>
-<h4 id="图片">图片</h4><p>Markdown使用一种和链接很相似的语法来标记图片，同样也允许两种样式：<strong>行内和参考</strong>。</p>
-<p><strong>行内图片</strong>的语法看起来像是：</p>
-<pre><code>![<span class="link_label">Alt text</span>](<span class="link_url">/path/to/img.jpg</span>)
-
-![<span class="link_label">Alt text</span>](<span class="link_url">/path/to/img.jpg "Optional title"</span>)
-</code></pre><p>详细叙述如下：</p>
-<ul>
-<li>一个惊叹号!</li>
-<li>接着一个方括号，里面放上图片的替换文字</li>
-<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的’title’文字。</li>
-</ul>
-<p><strong>参考式</strong>的图片语法则长得像这样：</p>
-<pre><code>![<span class="link_label">Alt text</span>][<span class="link_reference">id</span>]
-</code></pre><p>「id」是图片参考的名称，图片参考的定义方式则和连结参考一样：</p>
-<pre><code>[<span class="property">id</span>]: url/<span class="keyword">to</span>/image  <span class="string">"Optional title attribute"</span>
-</code></pre><p>到目前为止， Markdown还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的<img>标签。</p>
-<hr>
-<h3 id="其他">其他</h3><h4 id="自动链接">自动链接</h4><p>Markdown支持比较简短的自动连结形式来处理网址和电子邮件信箱，只要是用方括号包起来，Markdown就会自动把它转成链接，链接的文字就和链接地址一样.</p>
-<pre><code>&lt;<span class="string">http:</span><span class="comment">//example.com/&gt;</span>
-</code></pre><p>邮件连结也很类似，只是Markdown会先做一个编码转换的过程，把文字字符转成16进位码的HTML实体.</p>
-<pre><code><span class="tag">&lt;address@example.com&gt;</span>
-</code></pre><hr>
-<h4 id="MD转义字符">MD转义字符</h4><p>Markdown可以利用反斜杠来插入一些在语法中有其他意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用<code>&lt;em&gt;</code>标签），你可以在星号的前面加上反斜杠：</p>
-<pre><code>\<span class="keyword">*</span>literal asterisks\<span class="keyword">*</span>
-</code></pre><p>Markdown支持在下面这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<pre><code>\   反斜杠
-`   反引号
-<span class="bullet">*   </span>星号
-_   底线
-{}  大括号
-[]  方括号
-()  括号
-<span class="header">#   井字号</span>
-<span class="bullet">+   </span>加号
-<span class="bullet">-   </span>减号
-.   英文句点
-!   惊叹号
-</code></pre><hr>
-<h3 id="笔记整理">笔记整理</h3><p>学习整理自<a href="http://markdown.tw/" title="Markdown语法说明" target="_blank" rel="external">Markdown语法说明</a>,原文档案<a href="https://raw.githubusercontent.com/othree/markdown-syntax-zhtw/master/syntax.md" title="Github" target="_blank" rel="external">Github</a>,感谢制作者及翻译者!</p>
-<p>学习整理by <a href="http://weibo.com/u/3097621141" title="新浪微博" target="_blank" rel="external">木叶初华</a> in JXUST.</p>
-<p>提示：除非注明，<a href="http://silensea.org/" target="_blank" rel="external">静海散人博客</a>文章均为原创，转载请以链接形式标明本文地址，谢谢！</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[Markdown; 语法; code; 文本; 编辑;]]>
-    
-    </summary>
-    
-      <category term="代码" scheme="http://silensea.org/tags/%E4%BB%A3%E7%A0%81/"/>
-    
-      <category term="语言" scheme="http://silensea.org/tags/%E8%AF%AD%E8%A8%80/"/>
-    
-      <category term="倒腾技术" scheme="http://silensea.org/categories/%E5%80%92%E8%85%BE%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   

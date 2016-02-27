@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://silensea.org/2016/02/27/Some-Note-of-Front-end-development/</loc>
+    <lastmod>2016-02-27T14:42:27.842Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://silensea.org/2015/11/30/CSS-Reset/</loc>
     <lastmod>2015-12-21T10:19:48.750Z</lastmod>
   </url>
